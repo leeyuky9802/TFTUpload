@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>云顶上传服务器</title>
+    <link href="index.css" rel="stylesheet" />
+    <link href="./demo.css" rel="stylesheet" media="screen" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>云顶上传服务器（24小时开机）</h1>
+      
+      <div class="alert alert-warining hidden" id="support-alert">
+        <b>Warning!</b> Your browser does not seem to support the features necessary to run tus-js-client. The buttons below may work but probably will fail silently.
+      </div>
+
+      <br />
+
+      <!-- <table>
+        <tr>
+          <td>
+            <label for="endpoint">
+              Upload endpoint:
+            </label>
+          </td>
+          <td>
+            <input type="text" id="endpoint" name="endpoint" value="http://1.1.1.10:1080/files">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="chunksize">
+              Chunk size (bytes):
+            </label>
+          </td>
+          <td>
+            <input type="number" id="chunksize" name="chunksize" value="10000000">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="paralleluploads">
+              Parallel upload requests:
+            </label>
+          </td>
+          <td>
+            <input type="number" id="paralleluploads" name="paralleluploads" value="1">
+          </td>
+        </tr>
+      </table> -->
+
+      <br />
+
+      <input type="file">
+
+      <span id="percent-label" class="text">0%</span>
+
+      <br />
+      <br />
+
+      <div class="row">
+        <div class="span8">
+          <div class="progress progress-striped progress-success">
+            <div class="bar" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div class="span4">
+          <button class="btn stop" id="toggle-btn">开始上传</button>
+        </div>
+      </div>
+
+      <hr />
+      <h3>Uploads</h3>
+      <p id="upload-list">
+        成功的上传会被列在这里
+      </p>
+
+    </div>
+  </body>
+  <script src="tus.js"></script>
+  <script src="demo.js"></script>
+</html>
